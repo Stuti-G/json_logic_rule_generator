@@ -1,7 +1,8 @@
 import asyncio
-import httpx
 import json
-from typing import Dict, Any
+from typing import Any, Dict
+
+import httpx
 
 BASE_URL = "http://localhost:8000"
 

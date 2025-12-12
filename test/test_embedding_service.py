@@ -1,12 +1,13 @@
-import pytest
-import numpy as np
-import sys
 import os
+import sys
+
+import numpy as np
+import pytest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from app.services.embedding_service import EmbeddingService
 from app.config.store_keys import SAMPLE_STORE_KEYS
+from app.services.embedding_service import EmbeddingService
 
 
 class TestEmbeddingService:

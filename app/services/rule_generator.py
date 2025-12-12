@@ -1,9 +1,11 @@
 import json
-from app.config.settings import GEMINI_API_KEY
-import re
-from typing import List, Dict, Any
 import logging
+import re
+from typing import Any, Dict, List
+
 import google.generativeai as genai
+
+from app.config.settings import GEMINI_API_KEY
 
 logger = logging.getLogger(__name__)
 

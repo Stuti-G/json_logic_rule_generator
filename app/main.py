@@ -1,14 +1,15 @@
+import logging
+from typing import Any, Dict, List, Optional
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import List, Optional, Dict, Any
-import logging
 
+from app.config.policy_docs import POLICY_DOCUMENTS
+from app.config.store_keys import SAMPLE_STORE_KEYS
 from app.services.embedding_service import EmbeddingService
 from app.services.rag_service import RAGService
 from app.services.rule_generator import RuleGenerator
-from app.config.store_keys import SAMPLE_STORE_KEYS
-from app.config.policy_docs import POLICY_DOCUMENTS
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

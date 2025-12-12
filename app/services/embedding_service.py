@@ -1,8 +1,9 @@
-import numpy as np
-from typing import List, Dict, Any, Optional
-from sentence_transformers import SentenceTransformer
 import logging
 import re
+from typing import Any, Dict, List, Optional
+
+import numpy as np
+from sentence_transformers import SentenceTransformer
 
 logger = logging.getLogger(__name__)
 

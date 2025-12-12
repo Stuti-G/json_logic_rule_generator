@@ -12,7 +12,6 @@ POLICY_DOCUMENTS = [
     Applications with bureau scores below 550 should generally be flagged as high risk.
     For applicants between 550-600, additional documentation may be required.
     """,
-    
     """
     ## Applicant Eligibility Criteria
     
@@ -29,7 +28,6 @@ POLICY_DOCUMENTS = [
     Veterans and government employees may receive preferential treatment.
     The 'veteran' tag in primary_applicant.tags indicates military service.
     """,
-    
     """
     ## Business Vintage Requirements
     
@@ -45,7 +43,6 @@ POLICY_DOCUMENTS = [
     GST registration age (gst.registration_age_months) can serve as a proxy 
     for business vintage when formal business vintage data is unavailable.
     """,
-    
     """
     ## High Risk Indicators
     
@@ -65,7 +62,6 @@ POLICY_DOCUMENTS = [
     - Inward bounces > 3 in last 6 months: Moderate risk
     - Outward bounces > 2 in last 6 months: High risk
     """,
-    
     """
     ## Financial Ratios and Thresholds
     
@@ -82,7 +78,6 @@ POLICY_DOCUMENTS = [
     - Avg monthly turnover should be consistent with declared income
     - Total credits should reasonably exceed total debits for healthy cash flow
     """,
-    
     """
     ## GST Compliance Requirements
     
@@ -96,7 +91,7 @@ POLICY_DOCUMENTS = [
     single customers, which is a business continuity risk.
     
     GST turnover should align with banking turnover (within 20% variance).
-    """
+    """,
 ]
 
 

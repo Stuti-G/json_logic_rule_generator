@@ -131,7 +131,6 @@ curl -X POST http://localhost:8000/generate-rule \
   ],
   "confidence_score": 0.9101
 }
-```
 
 ## Running Tests
 

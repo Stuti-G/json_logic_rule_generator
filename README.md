@@ -132,7 +132,6 @@ curl -X POST http://localhost:8000/generate-rule \
   "confidence_score": 0.9101
 }
 
-```
 ## Running Tests
 
 **Unit tests:**
@@ -171,39 +170,6 @@ Reject if GST missed returns > 2 or high risk suppliers count > 3.
 ```
 Approve if FOIR is less than 0.5 and debt to income ratio below 0.4.
 ```
-
-## Supported Fields
-
-| Group | Field | Description |
-|-------|-------|-------------|
-| **bureau** | bureau.score | Bureau/CIBIL Score |
-| | bureau.dpd | Days Past Due |
-| | bureau.wilful_default | Wilful Default Flag |
-| | bureau.overdue_amount | Overdue Amount |
-| | bureau.is_ntc | New to Credit Flag |
-| | bureau.enquiries | Credit Enquiries |
-| | bureau.suit_filed | Suit Filed Flag |
-| | bureau.active_accounts | Active Accounts Count |
-| **business** | business.vintage_in_years | Business Age in Years |
-| | business.commercial_cibil_score | Commercial CIBIL Score |
-| | business.address.state | Business State |
-| | business.address.pincode | Business Pincode |
-| **primary_applicant** | primary_applicant.age | Applicant Age |
-| | primary_applicant.monthly_income | Monthly Income |
-| | primary_applicant.tags | Applicant Tags (array) |
-| **banking** | banking.abb | Average Bank Balance |
-| | banking.avg_monthly_turnover | Monthly Turnover |
-| | banking.inward_bounces | Inward Bounces |
-| | banking.outward_bounces | Outward Bounces |
-| **gst** | gst.turnover | GST Turnover |
-| | gst.missed_returns | Missed GST Returns |
-| | gst.registration_age_months | GST Registration Age |
-| **metrics** | foir | Fixed Obligation to Income Ratio |
-| | debt_to_income | Debt to Income Ratio |
-
-See `app/config/store_keys.py` for the complete list.
-
-
 ## Configuration
 
 ### Environment Variables
@@ -218,11 +184,3 @@ See `app/config/store_keys.py` for the complete list.
 - **Add new fields**: Edit `app/config/store_keys.py`
 - **Add policy documents**: Edit `app/config/policy_docs.py`
 - **Adjust embedding model**: Change `model_name` in `EmbeddingService`
-
-## License
-
-MIT
-
-## Contributing
-
-Feel free to open issues or submit PRs!

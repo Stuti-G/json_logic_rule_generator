@@ -2,7 +2,7 @@
 
 An AI-powered API that converts natural language prompts into valid JSON Logic rules using embeddings and RAG (Retrieval-Augmented Generation).
 
-## 🎯 What It Does
+## What It Does
 
 This API takes plain English descriptions like:
 
@@ -25,7 +25,7 @@ And generates valid JSON Logic:
 }
 ```
 
-## 🚀 Features
+## Features
 
 - **Natural Language to JSON Logic**: Convert human-readable rules to machine-executable format
 - **Semantic Key Mapping**: Uses embeddings to understand that "credit score" means `bureau.score`
@@ -33,7 +33,7 @@ And generates valid JSON Logic:
 - **Validation**: Ensures only allowed fields are used
 - **Confidence Scoring**: Know how reliable the generated rule is
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 json-logic-generator/
@@ -54,7 +54,7 @@ json-logic-generator/
 └── README.md
 ```
 
-## 🛠️ Setup
+## Setup
 
 ### Prerequisites
 
@@ -91,11 +91,7 @@ json-logic-generator/
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-The API will be available at `http://localhost:8000`
-
-**Interactive docs**: `http://localhost:8000/docs`
-
-## 📡 API Endpoints
+## API Endpoints
 
 ### POST /generate-rule
 
@@ -135,25 +131,9 @@ curl -X POST http://localhost:8000/generate-rule \
   ],
   "confidence_score": 0.9101
 }
+
 ```
-
-### GET /keys
-
-List all available fields.
-
-```bash
-curl http://localhost:8000/keys
-```
-
-### POST /find-keys
-
-Debug endpoint to see key mappings without generating a rule.
-
-```bash
-curl -X POST "http://localhost:8000/find-keys?prompt=credit%20score%20above%20700&top_k=5"
-```
-
-## 🧪 Running Tests
+## Running Tests
 
 **Unit tests:**
 ```bash
@@ -165,7 +145,7 @@ pytest tests/test_embedding_service.py -v
 python tests/test_examples.py
 ```
 
-## 📋 Example Prompts
+## Example Prompts
 
 ### Example 1: Basic AND Conditions
 ```
@@ -192,7 +172,7 @@ Reject if GST missed returns > 2 or high risk suppliers count > 3.
 Approve if FOIR is less than 0.5 and debt to income ratio below 0.4.
 ```
 
-## 🔑 Supported Fields
+## Supported Fields
 
 | Group | Field | Description |
 |-------|-------|-------------|
@@ -224,7 +204,7 @@ Approve if FOIR is less than 0.5 and debt to income ratio below 0.4.
 See `app/config/store_keys.py` for the complete list.
 
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -239,10 +219,10 @@ See `app/config/store_keys.py` for the complete list.
 - **Add policy documents**: Edit `app/config/policy_docs.py`
 - **Adjust embedding model**: Change `model_name` in `EmbeddingService`
 
-## 📝 License
+## License
 
 MIT
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to open issues or submit PRs!
